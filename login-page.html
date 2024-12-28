@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - CRUD System</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/login$register.css">
+</head>
+<body>
+    <a href="home.html" class="back-to-home">
+        <i class="fas fa-arrow-left"></i> Back to Home
+    </a>
+    <div class="container">
+        <div class="login-container">
+            <div class="login-header">
+                <h2>Welcome Back!</h2>
+                <p class="text-muted">Please login to your account</p>
+            </div>
+            <form id="loginForm">
+                <div class="input-field">
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                        <input type="email" placeholder="Enter your email" class="form-control" id="email" required>
+                    </div>
+                </div>
+                <div class="input-field">
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                        <div class="password-field">
+                            <input type="password" placeholder="Enter your password" class="form-control" id="password" required>
+                            <i class="fas fa-eye toggle-password"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                    <label class="form-check-label" for="rememberMe">Remember me</label>
+                </div>
+                <button type="submit" class=" btn-primary" id="submit-btn">
+                    <i class="fas fa-sign-in-alt me-2"></i>Login
+                </button>
+                <div class="text-center">
+                    <p class="mb-0">Don't have an account? <a href="register-page.html">Register here</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+</html>

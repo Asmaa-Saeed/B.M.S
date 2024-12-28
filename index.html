@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUDS System</title>
+
+    <!-- ===== CSS-File ===== Font-Awesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+
+    <!-- ===== CSS-File ===== Variables -->
+    <link rel="stylesheet" href="css/variables.css" />
+
+    <!-- ===== CSS-File ===== Style -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- ===== CSS-File ===== Responsive -->
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <!-- ===== CSS-File ===== Style-Switcher -->
+    <link
+      rel="stylesheet"
+      href="css/skins/skin-3.css"
+      class="alternate-style"
+      title="skin-3"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="css/skins/skin-1.css"
+      class="alternate-style"
+      title="skin-1"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="css/skins/skin-2.css"
+      class="alternate-style"
+      title="skin-2"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="css/skins/skin-4.css"
+      class="alternate-style"
+      title="skin-4"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="css/skins/skin-5.css"
+      class="alternate-style"
+      title="skin-5"
+      disabled
+    />
+    <link rel="stylesheet" href="css/styleSwitcher.css" />
+  </head>
+  <body>
+    <!-- ===== Start ===== Main-Section -->
+    <main>
+      <!-- ===== Start ===== Style-Switcher -->
+      <nav class="style-switcher">
+        <ul>
+          <li class="style-switcher-toggler">
+            <i class="fas fa-cog fa-spin"></i>
+          </li>
+          <li class="dark-mode">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#e8eaed"
+            >
+              <path
+                d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#e8eaed"
+            >
+              <path
+                d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"
+              />
+            </svg>
+          </li>
+          <li onclick="setActiveStyle('skin-1')" class="skin-1"></li>
+          <li onclick="setActiveStyle('skin-2')" class="skin-2"></li>
+          <li onclick="setActiveStyle('skin-3')" class="skin-3"></li>
+          <li onclick="setActiveStyle('skin-4')" class="skin-4"></li>
+          <li onclick="setActiveStyle('skin-5')" class="skin-5"></li>
+        </ul>
+      </nav>
+      <!-- ===== End ===== ColorBar -->
+      <!-- =dotnet ef migrations add InitialCreate
+      dotnet ef database updatedotnet ef migrations add InitialCreate
+      dotnet ef database update==== start login and register icons ===== -->
+    
+      <!-- ===== end login and register icons ===== -->
+      <!-- ===== Start ===== Inputs-Section -->
+      <section class="inputs-section hidden">
+        <!-- ===== Inputs-Content =====
+        Presentation-Card And Inputs -->
+        <div class="container inputs-content">
+          <!-- === Presentation-Card === -->
+          <ul class="card">
+            <li>
+              <h4>
+                <span id="checkTitle"
+                  ><i class="fa-solid fa-check fa-fade"></i
+                ></span>
+                title
+              </h4>
+              <span id="titleVal">#</span>
+            </li>
+            <li>
+              <h4>
+                <span id="checkPrice"
+                  ><i class="fa-solid fa-check fa-fade"></i
+                ></span>
+                price
+              </h4>
+              <span id="priceVal">$0</span>
+            </li>
+            <li>
+              <h4>
+                <span id="checkTaxes"
+                  ><i class="fa-solid fa-check fa-fade"></i
+                ></span>
+                taxes
+              </h4>
+              <span id="taxesVal">$0</span>
+            </li>
+            <li>
+              <h4>
+                <span id="checkAds"
+                  ><i class="fa-solid fa-check fa-fade"></i
+                ></span>
+                ads
+              </h4>
+              <span id="adsVal">$0</span>
+            </li>
+            <li>
+              <h4>
+                <span id="checkDiscount"
+                  ><i class="fa-solid fa-check fa-fade"></i
+                ></span>
+                discount
+              </h4>
+              <span id="discountVal">-$0</span>
+            </li>
+            <li>
+              <h4>
+                <span id="checkTotal"
+                  ><i class="fa-solid fa-check fa-fade"></i
+                ></span>
+                total
+              </h4>
+              <span id="totalVal">$0</span>
+            </li>
+            <li>
+              <h4>
+                <span id="checkCategory"
+                  ><i class="fa-solid fa-check fa-fade"></i
+                ></span>
+                category
+              </h4>
+              <span id="categoryVal">#</span>
+            </li>
+            <li class="countVal">
+              <span id="countVal">+</span>
+            </li>
+          </ul>
+
+          <!-- === Inputs === -->
+          <div class="inputs">
+            <input
+              onkeyup="getValues()"
+              type="text"
+              placeholder="Title"
+              id="title"
+            />
+            <div class="price">
+              <input
+                onkeyup="getValues()"
+                type="number"
+                placeholder="Price"
+                id="price"
+              />
+              <input
+                onkeyup="getValues()"
+                type="number"
+                placeholder="Taxes"
+                id="taxes"
+              />
+              <input
+                onkeyup="getValues()"
+                type="number"
+                placeholder="Ads"
+                id="ads"
+              />
+              <input
+                onkeyup="getValues()"
+                type="number"
+                placeholder="Discount"
+                id="discount"
+              />
+            </div>
+            <input
+              onkeyup="getValues()"
+              type="text"
+              placeholder="Category"
+              id="category"
+            />
+            <input
+              onkeyup="getValues()"
+              type="number"
+              placeholder="Count"
+              id="count"
+              pattern="\d{1,5}"
+            />
+            <button id="submit"><i class="fa-solid fa-lock"></i> Create</button>
+            <button onclick="directing()">
+              <i class="fa-regular fa-eye"></i> Data Review
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- ===== End ===== Inputs-Section -->
+
+      <!-- ===== Start ===== Outputs-Section -->
+      <section class="outputs-section">
+        <!-- ===== Outputs-Content =====
+        Head And Search And Outputs -->
+        <div class="container">
+          <!-- === Head === -->
+          <div class="head">
+            <h1>cruds</h1>
+            <p>product management system</p>
+          </div>
+
+          <!-- === Search === -->
+          <div class="search">
+            <button onclick="directing()">
+              <i class="fa-solid fa-pen-to-square"></i> Creation page
+            </button>
+            <input
+              onkeyup="searchData(this.value)"
+              type="text"
+              placeholder="Search"
+              id="search"
+            />
+            <div class="btnSearch">
+              <button onclick="getSearchMode(this.id)" id="searchTitle">
+                <i class="fa-solid fa-search"></i> Search By Title
+              </button>
+              <button onclick="getSearchMode(this.id)" id="searchCategory">
+                <i class="fa-solid fa-search"></i> Search By Category
+              </button>
+            </div>
+            <div id="deleteAll"></div>
+          </div>
+
+          <!-- === Outputs === -->
+          <div class="outputs">
+            <table>
+              <!-- = Outputs-Head = -->
+              <tr>
+                <th>id</th>
+                <th>title</th>
+                <th>price</th>
+                <th>taxes</th>
+                <th>ads</th>
+                <th>discount</th>
+                <th>total</th>
+                <th>category</th>
+                <th>update</th>
+                <th>delete</th>
+              </tr>
+
+              <!-- = Outputs-Items = -->
+              <tbody id="tbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <!-- ===== End ===== Outputs-Section -->
+
+      <div class="scroll-up">
+        <span>
+          <i class="fa-solid fa-shuttle-space fa-fade"></i>
+        </span>
+      </div>
+    </main>
+    <!-- ===== End ===== Main-Section -->
+
+    <!-- ===== JS-File ===== Font-Awesome -->
+    <script src="js/all.min.js"></script>
+
+    <!-- ===== JS-File ===== Main -->
+    <script src="js/main.js"></script>
+
+    <!-- ===== JS-File ===== Style Switcher-->
+    <script src="js/styleSwitcher.js"></script>
+  </body>
+</html>

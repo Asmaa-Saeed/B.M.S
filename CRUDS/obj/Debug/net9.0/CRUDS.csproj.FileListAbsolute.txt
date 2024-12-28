@@ -1,0 +1,7 @@
+F:\My-Projects\CRUDS-System-main\CRUDS\obj\Debug\net9.0\CRUDS.GeneratedMSBuildEditorConfig.editorconfig
+F:\My-Projects\CRUDS-System-main\CRUDS\obj\Debug\net9.0\CRUDS.AssemblyInfoInputs.cache
+F:\My-Projects\CRUDS-System-main\CRUDS\obj\Debug\net9.0\CRUDS.AssemblyInfo.cs
+F:\My-Projects\CRUDS-System-main\CRUDS\obj\Debug\net9.0\CRUDS.csproj.CoreCompileInputs.cache
+F:\My-Projects\CRUDS-System-main\CRUDS\obj\Debug\net9.0\CRUDS.MvcApplicationPartsAssemblyInfo.cache
+F:\My-Projects\CRUDS-System-main\CRUDS\obj\Debug\net9.0\CRUDS.RazorAssemblyInfo.cache
+F:\My-Projects\CRUDS-System-main\CRUDS\obj\Debug\net9.0\CRUDS.RazorAssemblyInfo.cs

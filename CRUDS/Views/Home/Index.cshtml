@@ -1,0 +1,35 @@
+@{
+    ViewData["Title"] = "CRUDS System";
+}
+
+<!-- ===== Start ===== Main-Section -->
+<main>
+    <!-- ===== Start ===== Style-Switcher -->
+    <nav class="style-switcher">
+        <ul>
+            <li class="style-switcher-toggler">
+                <!-- Your existing style switcher content -->
+            </li>
+        </ul>
+    </nav>
+    
+    <!-- ===== Start ===== Authentication -->
+    <div class="authentication">
+        <a asp-controller="Account" asp-action="Login" class="btn-login">Login</a>
+        <a asp-controller="Account" asp-action="Register" class="btn-register">Register</a>
+    </div>
+
+    <!-- Your existing sections -->
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div>
+
+</main>
+
+@section Scripts {
+    <!-- JavaScript files -->
+    <script src="~/js/all.min.js"></script>
+    <script src="~/js/main.js"></script>
+    <script src="~/js/styleSwitcher.js"></script>
+}

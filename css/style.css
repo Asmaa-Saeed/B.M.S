@@ -1,0 +1,329 @@
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--text-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+}
+
+/* ********************
+Start General
+And Inputs And Buttons
+******************** */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: sans-serif;
+}
+
+body {
+  background: var(--bg-color);
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+section {
+  width: 100%;
+  padding: 6%;
+  animation: slideSection 0.3s ease;
+}
+
+@keyframes slideSection {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ********************
+Inputs
+******************** */
+input {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  outline: none;
+  border: none;
+  color: var(--text-color);
+  background: var(--bg-color);
+  box-shadow: var(--box-shadow);
+  border-top: var(--border-top);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+input:focus {
+  transform: scale(1.03);
+}
+
+/* ********************
+Buttons
+******************** */
+button {
+  width: 100%;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 10px;
+  margin: 5px 0;
+  color: var(--button-color);
+  background-color: var(--primary);
+  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.05),
+  0 5px 15px rgba(0, 0, 0, 0.05);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  filter:brightness(1.2);
+  -webkit-filter:brightness(1.2);
+}
+
+/* ********************
+End General
+And Inputs And Buttons
+******************** */
+
+/* ********************
+Start Inputs-Section
+Inputs-Content
+Presentation-Card And Inputs
+******************** */
+.inputs-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ********************
+Inputs-Content
+******************** */
+.inputs-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ********************
+Presentation-Card
+******************** */
+.card {
+  position: relative;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  padding: 15px;
+  background: var(--bg-color);
+  box-shadow: var(--box-shadow);
+  border-top: var(--border-top);
+}
+
+.card li {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: relative;
+  border-radius: 25px;
+  color: var(--text-color);
+  box-shadow: var(--box-shadow);
+  border-top: var(--border-top);
+}
+
+.card .countVal {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  order: -1;
+  overflow: hidden;
+}
+
+.card li h4 {
+  text-transform: uppercase;
+}
+
+.card li h4 span {
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.card li span {
+  color: var(--text-color-2);
+}
+
+/* ********************
+Inputs
+******************** */
+.inputs,
+.price {
+  width: 100%;
+  max-width: 650px;
+  display: grid;
+  gap: 15px;
+}
+
+.price {
+  grid-template-columns: repeat(4,1fr);
+}
+
+#submit {
+  opacity: 0.2;
+}
+/* ********************
+End Inputs-Section -
+Inputs-Content -
+Presentation-Card And Inputs
+******************** */
+
+/* ********************
+Start Outputs-Section -
+Outputs-Content -
+Head And Search And Outputs
+******************** */
+/* ********************
+Head
+******************** */
+.head {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 50px 0;
+}
+
+.head h1 {
+  color: var(--text-color);
+  font-size: 50px;
+  letter-spacing: 2px;
+}
+
+.head p {
+  font-size: 30px;
+  letter-spacing: 2px;
+  color: var(--text-color-2);
+}
+
+/* ********************
+Search
+******************** */
+.search {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btnSearch {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnSearch button {
+  width: 45%;
+}
+
+/* ********************
+Outputs
+******************** */
+
+table {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  border-spacing: 0 20px;
+  color: var(--text-color);
+}
+
+table th {
+  text-transform: uppercase;
+}
+
+th, td {
+  padding: 10px 15px;
+}
+
+#tbody tr {
+  position: relative;
+  box-shadow: var(--box-shadow);
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+#tbody tr::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 5%;
+  width: 5px;
+  height: 5px;
+  background: var(--primary);
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+#tbody tr:hover::after {
+  width: 45%;
+  left: 50%;
+  transform: translate(-50%);
+}
+/* ********************
+Start Outputs-Section -
+Outputs-Content -
+Head And Search And Outputs
+******************** */
+
+.hidden {
+  display: none;
+}
+
+
+.authentication {
+   display: flex;
+   margin-top: 20px;
+   gap: 10px;
+}
+
+.btn-login, 
+.btn-register {
+    border: 1px solid #1e92db;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #1e92db;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 0 4px #bdbcbc;
+}

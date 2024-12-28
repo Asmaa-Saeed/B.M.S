@@ -1,0 +1,8 @@
+:root {
+  --primary: #2f27ce;
+  --button-color: #fff;
+}
+
+body.dark {
+  --primary: #2f27ce;
+}

@@ -1,0 +1,148 @@
+/* ********************
+Start Style-Switcher
+******************** */
+nav {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  transform: translateY(-100%);
+  transition: 0.4s;
+  z-index: 999;
+}
+
+nav.open {
+  transform: translateY(10px);
+}
+
+nav ul {
+  position: relative;
+  width: 300px;
+  height: 60px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  background: var(--bg-color);
+  box-shadow: var(--box-shadow);
+  border-top: var(--border-top);
+  border-radius: 25px;
+}
+
+nav ul li {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: var(--bg-color);
+  box-shadow: var(--box-shadow);
+  border-top: var(--border-top);
+  transition: 0.4s;
+}
+
+nav ul li:hover {
+  transform: scale(1.1);
+}
+
+.style-switcher-toggler,
+.dark-mode {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -60px;
+  color: var(--text-color);
+}
+
+nav ul .style-switcher-toggler {
+  left: 20px;
+}
+nav ul .dark-mode {
+  right: 20px;
+}
+
+.dark-mode svg {
+  fill: var(--text-color);
+}
+
+.dark-mode svg:last-child {
+  display: none;
+}
+
+.dark .dark-mode svg:first-child {
+  display: none;
+}
+
+.dark .dark-mode svg:last-child {
+  display: block;
+}
+
+.skin-1 {
+  background-color: #2f27ce;
+}
+.skin-2 {
+  background-color: #37b182;
+}
+.skin-3 {
+  background-color: var(--bg-color);
+}
+
+.skin-4 {
+  background-color: #f582ae;
+}
+
+.skin-5 {
+  background-color: #ec1839;
+}
+/* ********************
+End Style-Switcher
+******************** */
+
+/* ********************
+Start Scroll-Up
+******************** */
+.scroll-up {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 30px;
+  left: -100px;
+  color: var(--text-color);
+  background: var(--primary);
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+  z-index: 1;
+  opacity: 0.5;
+  transition: 0.4s;
+}
+.scroll-up.open {
+  left: 40px;
+}
+
+.scroll-up:hover {
+  opacity: 1;
+}
+
+.scroll-up span {
+  font-size: 30px;
+  transform: rotate(360deg) translate(-100px);
+  transition: 0.4s;
+}
+
+.scroll-up.open span {
+  transform: rotate(-22.5deg);
+}
+
+.scroll-up:hover span {
+  transform: rotate(-90deg) translate(50px);
+}
+
+/* ********************
+End Scroll-Up
+******************** */
